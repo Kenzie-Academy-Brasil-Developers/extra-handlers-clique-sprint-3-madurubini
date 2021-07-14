@@ -15,6 +15,7 @@
         <h2>1. Color changer</h2>
         <button id="gray_button">Gray</button>
         <button id="blue_button">Blue</button>
+        <button id="pink_button">Pink</button>
         <div id="color_box" class="gray"></div>        
         <script>
             const color_box = document.getElementById("color_box");
@@ -29,11 +30,10 @@
                 color_box.className = "blue";
             };
 
-            /* TODO 1
-             *
-             *  Adicionar um botão e um event handler 
-             *  e o botão torna o quadrado rosa.
-             */
+            const pink_button = document.getElementById("pink_button");
+            pink_button.onclick = function () {
+                color_box.className = "pink";
+            }
         </script>
 
         <hr>
@@ -47,13 +47,17 @@
             
             const counter_button = document.getElementById("counter_button");
             counter_button.onclick = function() {
-                /* TODO 2
+                count++
+                countspan.innerText = count    
+                
+            }
+
+            /* TODO 2
                  *
                  *  A função incrementa 1 em um contador "count", 
                  *  atualiza o conteúdo de texto do "countspan" 
                  *  e mostra o valor atual de "count".
                  */
-            }
         </script>
 
         <hr>
@@ -63,6 +67,11 @@
         <script>
             const even_or_odd_button = document.getElementById("even_or_odd_button");
             even_or_odd_button.onclick = function() {
+                if(count%2 === 0){
+                    alert("O número do contador acima é par")
+                } else {
+                    alert("O número do contador acima é impar")
+                }
                 /* TODO 3
                  *
                  * A função mostra um "alert dialog" mostrando se o contador 
